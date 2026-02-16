@@ -1,10 +1,20 @@
 import React from 'react';
+import Image from "next/image";
 
-const Card = ({ title, description, imageUrl }) => {
+type CardProps = {
+    title: string;
+    description: string;
+    imageUrl: string;
+};
+
+const Card = ({ title, description, imageUrl }: CardProps) => {
     return (
         <div className="flex flex-col justify-center items-center max-w-sm rounded-lg overflow-hidden ">
             <h2 className="font-bold text-xl text-center mb-2">{title}</h2>
-            <img className="w-50 h-auto " src={imageUrl} alt="Image de la carte" />
+            <Image className="w-48 h-auto"
+                   src={imageUrl}
+                   alt="Image de la carte"
+            />
             <div className="px-6 py-4">
                 <p className="text-gray-700 text-base">{description}</p>
             </div>
