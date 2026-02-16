@@ -250,14 +250,6 @@
     @apply bg-clip-text text-transparent;
   }
 
-  .bg-grid {
-    --bg-grid-color: hsl(0 0% 100% / 0.1);
-    background-color: transparent; /* Couleur de fond */
-    background-image:
-            linear-gradient(90deg, var(--bg-grid-color) 1px, transparent 1px),
-            linear-gradient(180deg, var(--bg-grid-color) 1px, transparent 1px);
-    background-size: 64px 64px; /* Taille de la grille */
-  }
 }
 
   @layer base {
