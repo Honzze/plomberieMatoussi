@@ -12,6 +12,8 @@ const Card = ({ title, description, imageUrl }: CardProps) => {
         <div className="flex flex-col justify-center items-center max-w-sm rounded-lg overflow-hidden ">
             <h2 className="font-bold text-xl text-center mb-2">{title}</h2>
             <Image className="w-48 h-auto"
+                   width={152}
+                   height={130}
                    src={imageUrl}
                    alt="Image de la carte"
             />
