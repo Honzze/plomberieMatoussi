@@ -7,7 +7,6 @@ import React from "react";
 import {Hero} from "@/src/components/landing/Hero";
 import {Content} from "@/src/components/landing/content";
 import {Footer} from "@/src/components/landing/Footer";
-import Map from "@/src/components/landing/Maps";
 
 
 const geistSans = Geist({
