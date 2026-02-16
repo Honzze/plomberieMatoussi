@@ -46,7 +46,7 @@ export default function RootLayout({
             <Hero/>
             <Content/>
             {children}
-            <Map/>
+
             <Footer/>
 
         </ThemeProvider>
