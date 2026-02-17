@@ -64,7 +64,7 @@ export const Navbar = () => {
                 <div
                     className="absolute border-xs inset-y-0 right-0 flex items-center mr-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <button
-                        className="border-2  px-4 py-2 text-lg font-normal  border-white-500 rounded-full" ><a href="tel:+33612345678">06.12.34.56.78</a>
+                        className="bg-primary text-amber-50 mt-6 px-6 py-4 text-lg font-medium rounded-3xl ml-2 " ><a href="tel:+33612345678">06.12.34.56.78</a>
                     </button>
                 </div>
             </div>

@@ -9,7 +9,7 @@ export const Hero = () => {
                 <div className="flex flex-col items-start basis-1/2 ">
                     <h1 className="text-foreground font-bold text-4xl ">Plomberie & Multi-services à <a
                         className="text-primary">Nantes</a></h1>
-                    <h2 className="text-foreground font-medium text-xl pt-5 ">Plomberie & Multi-services Matoussi
+                    <h2 className="text-foreground font-medium text-lg pt-5 ">Plomberie & Multi-services
                         intervient dans nantes et ces alentours (Bougeunais, Rezé, Carquefou...) </h2>
                     <div className="flex flex-row">
                         <button
