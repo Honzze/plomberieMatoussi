@@ -9,7 +9,7 @@ type CardProps = {
 
 const Card = ({ title, description, imageUrl }: CardProps) => {
     return (
-        <div className="flex flex-col justify-center items-center max-w-sm rounded-lg overflow-hidden ">
+        <div className="flex flex-col justify-center items-center max-w-sm rounded-lg overflow-hidden sm:flex flex-col">
             <h2 className="font-bold text-xl text-center mb-2">{title}</h2>
             <Image className="w-48 h-auto"
                    width={152}

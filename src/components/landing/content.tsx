@@ -4,9 +4,9 @@ import CardEngagement from "./CardEngagement"
 export const Content = () => {
     return (
 
-        <div className="flew flew-row  max-w-7xl mx-auto my-20 px-4 sm:px-6 lg:px-8 justify-center items-center">
-            <h2 className="text-5xl mb-8 text-center">NOS SERVICES</h2>
-            <div className="flex flex-row gap-8">
+        <div className="flew flew-row  max-w-7xl mx-auto my-20 px-4 sm:flex flex-col justify-center items-center ">
+            <h2 className="text-5xl lg-8 text-center mb-5">NOS SERVICES</h2>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                 <Card
                     title="PLOMBERIE GÉNÉRALE"
                     description="Une isolation performante pour un meilleur confort et des économies d’énergie."
@@ -24,7 +24,7 @@ export const Content = () => {
                 />
 
             </div>
-            <div className="flex flex-row justify-center my-10 gap-8">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                 <Card
                     title="ELECTRICITÉ"
                     description="Des installations électriques sûres, conformes et adaptées à vos besoins."
@@ -40,7 +40,7 @@ export const Content = () => {
             </div>
             <div>
                 <h2 className="text-5xl mb-8 text-center pt-10">NOS ENGAEMENTS</h2>
-                <div className="flex flex-row gap-8">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-6">
 
                     <CardEngagement
                         title="Service rapide et efficace"
@@ -62,25 +62,6 @@ export const Content = () => {
 
             </div>
             <div>
-                <h2 className="text-5xl mb-8 text-center pt-10">NOS EQUIPEMENTS</h2>
-                <div className="flex flex-row gap-8">
-
-                    <CardEngagement
-                        title="Titre de la carte"
-                        description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-                        imageUrl="https://via.placeholder.com/400"
-                    />
-                    <CardEngagement
-                        title="Titre de la carte"
-                        description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-                        imageUrl="https://via.placeholder.com/400"
-                    />
-                    <CardEngagement
-                        title="Titre de la carte"
-                        description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-                        imageUrl="https://via.placeholder.com/400"
-                    />
-                </div>
 
 
             </div>

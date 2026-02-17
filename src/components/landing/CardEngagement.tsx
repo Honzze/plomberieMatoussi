@@ -11,8 +11,9 @@ const CardEngagement = ({ title, description, imageUrl }:CardEngagementProps) =>
     return (
         <div className="flex flex-col justify-center items-center max-w-sm rounded-lg overflow-hidden ">
             <h2 className="font-bold text-xl text-center mb-2">{title}</h2>
-            <Image className="size-24!"
-                   fill
+            <Image className="w-28 h-auto"
+                   width={96}
+                   height={96}
                    src={imageUrl}
                    alt="Image de la carte"
             />
