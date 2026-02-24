@@ -1,115 +1,160 @@
-import Link from "next/link"
+import Link from "next/link";
 import Image from "next/image";
-import {Button} from "@/src/components/ui/button";
-// import {ModeToggle} from "@/src/components/toggle-theme";
+import { Button } from "@/src/components/ui/button";
 import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-} from "@/src/components/ui/navigation-menu"
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/src/components/ui/navigation-menu";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuPortal,
-    DropdownMenuSeparator,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
-    DropdownMenuTrigger,
-} from "@/src/components/ui/dropdown-menu"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/src/components/ui/dropdown-menu";
 import React from "react";
 
 export const Navbar = () => {
-    return (
-        <nav
-            className="fixed top-0 mx-auto inset-x-0 flex flex-row justify-center overflow-visible bg-background text-foreground z-50 py-4 px-2 ">
-            <div className="flex items-center justify-between mx-auto max-w-7xl container px-2 sm:px-6 lg:px-8">
-                <div className="flex justify-center items-center">
-                    <Image src="/onlyLogo.png"
-                           width={100}
-                           height={500}
-                           alt="logo"
-                           className=" sm:h-20 "
-                    />
+  return (
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between">
+          {/* LOGO */}
+          <div className="flex flex-shrink-0 items-center">
+            <Link href="/">
+              <Image
+                src="/onlyLogo.png"
+                width={120}
+                height={60}
+                alt="Matoussi Plomberie"
+                className="h-12 w-auto object-contain sm:h-16"
+              />
+            </Link>
+          </div>
 
-                </div>
-                <div className="flex items-center mx-auto justify-between sm:items-stretch ">
-                    <div className="hidden sm:ml-6 sm:block relative overflow-visible">
-                        <div className="flex items-center space-x-4">
-                            <Link
-                                href="/services"
-                                className="rounded-md px-3 py-2 text-lg font-normal hover:bg-primary-foreground/10 "
-                            >
-                                PLOMBERIE
-                            </Link>
-                            <Link
+          {/* DESKTOP NAV */}
+          <div className="hidden lg:block">
+            <div className="flex items-center space-x-8">
+              <Link
+                href="/services"
+                className="group relative text-sm font-bold tracking-wider text-slate-700 uppercase transition hover:text-blue-600"
+              >
+                Plomberie
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all group-hover:w-full" />
+              </Link>
+
+              <Link
+                href="#"
+                className="group relative text-sm font-bold tracking-wider text-slate-700 uppercase transition hover:text-blue-600"
+              >
+                Dépannages
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all group-hover:w-full" />
+              </Link>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-transparent text-sm font-bold tracking-wider text-slate-700 uppercase hover:bg-transparent hover:text-blue-600 focus:bg-transparent">
+                      Services
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[200px] gap-2 border border-slate-100 bg-white p-4 shadow-xl">
+                        {[
+                          "Carrelage",
+                          "Électricité",
+                          "Domotique",
+                          "Maçonnerie",
+                        ].map((item) => (
+                          <li key={item}>
+                            <NavigationMenuLink asChild>
+                              <a
                                 href="#"
-                                className="rounded-md px-3 py-2 text-lg font-normal  hover:bg-primary-foreground/10"
-                            >
-                                DEPANNAGES
-                            </Link>
-                            <NavigationMenu>
-                                <NavigationMenuList>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuTrigger
-                                            className="rounded-md px-3 py-2 text-lg font-normal  hover:bg-primary-foreground/10">SERVICES</NavigationMenuTrigger>
-                                        <NavigationMenuContent className="bg-background">
-                                            <NavigationMenuLink
-                                                className="rounded-md px-3 py-2 text-base font-normal   hover:bg-primary-foreground/10">CARRELAGE</NavigationMenuLink>
-                                            <NavigationMenuLink
-                                                className="rounded-md px-3 py-2 text-base font-normal  hover:bg-primary-foreground/10">ELECTRICITER</NavigationMenuLink>
-                                            <NavigationMenuLink
-                                                className="rounded-md px-3 py-2 text-base font-normal  hover:bg-primary-foreground/10">DOMOTIQUE</NavigationMenuLink>
-                                            <NavigationMenuLink
-                                                className="rounded-md px-3 py-2 text-base font-normal  hover:bg-primary-foreground/10">MACONNERIE</NavigationMenuLink>
-
-                                        </NavigationMenuContent>
-                                    </NavigationMenuItem>
-                                </NavigationMenuList>
-                            </NavigationMenu>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    className="flex flex-row items-center absolute inset-y-0 right-0  mr-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <Button
-                        className="bg-primary text-amber-50 mt-6 px-6 py-4 text-lg font-medium rounded-3xl ml-2 "><a
-                        href="tel:+33612345678">06.12.34.56.78</a>
-                    </Button>
-                    <div className="block mx-2 mt-6 md:hidden ">
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="outline"> <Image className="w-8 h-auto"
-                                                                                            width={512}
-                                                                                            height={512}
-                                                                                            src={"/menu.png"}
-                                                                                            alt="Image de la carte"
-                                /></Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent>
-                                <DropdownMenuGroup>
-                                    <DropdownMenuItem>Nous Contacter</DropdownMenuItem>
-                                    <DropdownMenuItem>Nos Services</DropdownMenuItem>
-                                        <DropdownMenuItem asChild>
-                                            <Link href="/services">
-                                                Nos Services
-                                            </Link>
-                                        </DropdownMenuItem>
-                                </DropdownMenuGroup>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </div>
-
-                </div>
+                                className="block rounded-md p-2 text-xs font-semibold text-slate-600 uppercase hover:bg-slate-50 hover:text-blue-600"
+                              >
+                                {item}
+                              </a>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </div>
+          </div>
 
+          {/* ACTIONS */}
+          <div className="flex items-center gap-4">
+            {/* Phone Button - more "solid" look */}
+            <Button
+              asChild
+              className="relative h-12 rounded-full border-t border-white/20 bg-[#6a95c4] px-12 font-bold tracking-tight text-white shadow-[0_4px_14px_0_rgba(106,149,196,0.39)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#5d89ba] active:translate-y-0"
+            >
+              <a href="tel:+33612345678" className="flex items-center gap-2">
+                {/* Use a cleaner SVG icon instead of the emoji for a pro look */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.28-2.28a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span className="text-base">06.12.34.56.78</span>
+              </a>
+            </Button>
 
-        </nav>
-    )
-}
-
+            {/* Mobile Menu */}
+            <div className="lg:hidden">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-slate-700"
+                    >
+                      <line x1="4" x2="20" y1="12" y2="12" />
+                      <line x1="4" x2="20" y1="6" y2="6" />
+                      <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="mt-2 w-56">
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem className="font-bold tracking-tight uppercase">
+                      Plomberie
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="font-bold tracking-tight uppercase">
+                      Dépannages
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="font-bold tracking-tight uppercase">
+                      Services
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};

@@ -2,43 +2,57 @@ import React from "react";
 import Image from "next/image";
 
 export const Hero = () => {
-    return (
-        <div
-            className=" bg-no-repeat bg-center bg-cover w-full h-220 object-cover place-content-evenly px-20">
-            <div className="flex flex-row  items-center ">
-                <div className="flex flex-col items-start basis-1/2 ">
-                    <h1 className="text-foreground font-bold text-4xl ">Matoussi Plomberie & Multi-services à <a
-                        className="text-primary">Nantes</a></h1>
-                    <h2 className="text-foreground font-medium text-lg pt-5 "> Plomberie & Multi-services
-                        nos techniciens vous accompagnent pour vos projets de rénovation et de création, ils interviennent dans Nantes et ses alentours (Bougeunais, Rezé, Carquefou...) </h2>
-                    <div className="flex flex-row">
-                        <button
-                            className="bg-primary text-amber-50 mt-6 px-6 py-4 text-lg font-medium rounded-3xl mr-2  ">Nous
-                            contacter
-                        </button>
-                        <button
-                            className="bg-primary text-amber-50 mt-6 px-6 py-4 text-lg font-medium rounded-3xl ml-2 ">Nos
-                            Services
-                        </button>
+  return (
+    <section className="relative overflow-hidden py-24 lg:py-32">
+      {/* Background gradient */}
+      <div className="absolute inset-0 -z-10 bg-linear-to-br from-primary/10 via-background to-primary/5" />
 
+      <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+        <div className="flex flex-col-reverse gap-10 lg:flex-row lg:items-center">
+          {/* LEFT CONTENT */}
+          <div className="flex w-full flex-col items-start lg:w-1/2">
+            <span className="mb-3 inline-flex items-center rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary">
+              Plomberie & Multi-services à Nantes
+            </span>
 
-                    </div>
-                </div>
-                <div className="flex flex-row items-center justify-around border-2 rounded-lg">
-                    <Image
-                        className="hidden md:block rounded-lg "
-                        src="/bg-hero2.jpg"
-                        width={800}
-                        height={800}
-                        alt="Image de la carte"
-                    />
+            <h1 className="text-4xl leading-tight font-bold text-foreground sm:text-5xl">
+              Matoussi Plomberie & Multi-services à{" "}
+              <span className="text-primary">Nantes</span>
+            </h1>
 
+            <p className="mt-5 max-w-xl text-lg text-muted-foreground">
+              Nos techniciens vous accompagnent pour tous vos projets de
+              rénovation et de création. Intervention rapide à Nantes et dans
+              ses alentours (Bouguenais, Rezé, Carquefou…).
+            </p>
 
-                </div>
+            {/* CTA */}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md transition hover:opacity-90">
+                Nous contacter
+              </button>
 
-
+              <button className="rounded-2xl border border-primary px-7 py-4 text-base font-semibold text-primary transition hover:bg-primary hover:text-background">
+                Nos services
+              </button>
             </div>
-        </div>
-    )
-}
+          </div>
 
+          {/* RIGHT IMAGE */}
+          <div className="relative w-full lg:w-1/2">
+            <div className="overflow-hidden rounded-2xl border border-border shadow-xl">
+              <Image
+                className="h-full w-full object-cover"
+                src="/bg-hero2.jpg"
+                width={900}
+                height={700}
+                priority
+                alt="Technicien Matoussi Plomberie intervenant à Nantes"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

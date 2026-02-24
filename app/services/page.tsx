@@ -1,15 +1,9 @@
 export default function ServicesPages() {
-    return (
-        <main className=" ">
+  return (
+    <main className=" ">
+      <main></main>
 
-            <main>
-
-            </main>
-
-            <footer>
-
-            </footer>
-
-        </main>
-    );
+      <footer></footer>
+    </main>
+  );
 }
