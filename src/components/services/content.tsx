@@ -70,7 +70,7 @@ export const Content = () => {
               <Card
                   key={index}
                   {...service}
-                  className="h-full" // Force la carte à remplir toute la hauteur de sa cellule
+                   // Force la carte à remplir toute la hauteur de sa cellule
               />
           ))}
         </div>
