@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
+import {Button} from "@/src/components/ui/button";
 // import {ModeToggle} from "@/src/components/toggle-theme";
 import {
     NavigationMenu,
@@ -9,7 +9,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/src/components/ui/navigation-menu"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -21,7 +21,7 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/src/components/ui/dropdown-menu"
 import React from "react";
 
 export const Navbar = () => {
@@ -31,11 +31,10 @@ export const Navbar = () => {
             <div className="flex items-center justify-between mx-auto max-w-7xl container px-2 sm:px-6 lg:px-8">
                 <div className="flex justify-center items-center">
                     <Image src="/onlyLogo.png"
-                           width={730}
+                           width={100}
                            height={500}
                            alt="logo"
-                           className="w-20 h-12 sm:h-20 "
-
+                           className=" sm:h-20 "
                     />
 
                 </div>
@@ -43,7 +42,7 @@ export const Navbar = () => {
                     <div className="hidden sm:ml-6 sm:block relative overflow-visible">
                         <div className="flex items-center space-x-4">
                             <Link
-                                href="#"
+                                href="/services"
                                 className="rounded-md px-3 py-2 text-lg font-normal hover:bg-primary-foreground/10 "
                             >
                                 PLOMBERIE
@@ -78,33 +77,29 @@ export const Navbar = () => {
                 </div>
                 <div
                     className="flex flex-row items-center absolute inset-y-0 right-0  mr-2 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <button
+                    <Button
                         className="bg-primary text-amber-50 mt-6 px-6 py-4 text-lg font-medium rounded-3xl ml-2 "><a
                         href="tel:+33612345678">06.12.34.56.78</a>
-                    </button>
+                    </Button>
                     <div className="block mx-2 mt-6 md:hidden ">
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <Button variant="outline"><Button variant="outline"> <Image className="w-8 h-auto"
+                                <Button variant="outline"> <Image className="w-8 h-auto"
                                                                                             width={512}
                                                                                             height={512}
                                                                                             src={"/menu.png"}
                                                                                             alt="Image de la carte"
-                                /></Button></Button>
+                                /></Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent>
                                 <DropdownMenuGroup>
                                     <DropdownMenuItem>Nous Contacter</DropdownMenuItem>
-                                    <DropdownMenuSub>
-                                        <DropdownMenuSubTrigger>Nos Services</DropdownMenuSubTrigger>
-                                        <DropdownMenuPortal>
-                                            <DropdownMenuSubContent>
-                                                <DropdownMenuItem>Carrelage</DropdownMenuItem>
-                                                <DropdownMenuItem>Isolation</DropdownMenuItem>
-                                                <DropdownMenuSeparator/>
-                                            </DropdownMenuSubContent>
-                                        </DropdownMenuPortal>
-                                    </DropdownMenuSub>
+                                    <DropdownMenuItem>Nos Services</DropdownMenuItem>
+                                        <DropdownMenuItem asChild>
+                                            <Link href="/services">
+                                                Nos Services
+                                            </Link>
+                                        </DropdownMenuItem>
                                 </DropdownMenuGroup>
                             </DropdownMenuContent>
                         </DropdownMenu>

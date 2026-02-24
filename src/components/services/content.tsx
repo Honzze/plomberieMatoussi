@@ -1,20 +1,20 @@
-import Card from "./Card"
-import CardEngagement from "./CardEngagement"
+import Card from "@/src/components/landing/Card";
+import CardEngagement from "@/src/components/landing/CardEngagement";
 
 export const Content = () => {
     return (
 
-        <div className="flex flex-row  max-w-7xl mx-auto my-20 px-4 sm: justify-center items-center ">
+        <div className="flew flew-col  max-w-7xl mx-auto my-20 px-4 sm:flex flex-col">
             <h2 className="text-5xl lg-8 text-center mb-5">NOS SERVICES</h2>
-            <div className="flex flex-col sm: justify-center items-center gap-6">
+            <div className="flex flex-col md:flex-col justify-between  gap-6">
                 <Card
                     title="PLOMBERIE GÉNÉRALE"
-                    description="Une isolation performante pour un meilleur confort et des économies d’énergie."
                     imageUrl="/imgplombgene.png"
+                    liprops={["Première info", "Deuxième info", "Troisième info"]}
                 />
                 <Card
                     title="CARRELAGE ET FAÏENCE"
-                    description="Carrelage de qualité, durable et élégant pour tous vos espaces intérieurs et extérieurs."
+                    description="Carrelage de qualité, durable et élégant pour tos vos espaces intérieurs et extérieurs."
                     imageUrl="/imgcarrelagecard.png"
                 />
                 <Card
@@ -82,7 +82,6 @@ export const Content = () => {
 
 
             </div>
-
 
 
         </div>
