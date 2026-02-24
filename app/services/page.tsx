@@ -1,9 +1,10 @@
+import {Content} from "@/src/components/services/content";
+import React from "react";
+
 export default function ServicesPages() {
   return (
-    <main className=" ">
-      <main></main>
-
-      <footer></footer>
-    </main>
+    <section>
+        <Content />
+    </section>
   );
 }

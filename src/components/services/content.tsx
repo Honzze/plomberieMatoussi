@@ -2,78 +2,106 @@ import Card from "@/src/components/landing/Card";
 import CardEngagement from "@/src/components/landing/CardEngagement";
 
 export const Content = () => {
-  return (
-    <div className="flew flew-col mx-auto my-20 max-w-7xl flex-col px-4 sm:flex">
-      <h2 className="lg-8 mb-5 text-center text-5xl">NOS SERVICES</h2>
-      <div className="flex flex-col justify-between gap-6 md:flex-col">
-        <Card
-          title="PLOMBERIE GÉNÉRALE"
-          imageUrl="/imgplombgene.png"
-          liprops={["Première info", "Deuxième info", "Troisième info"]}
-        />
-        <Card
-          title="CARRELAGE ET FAÏENCE"
-          description="Carrelage de qualité, durable et élégant pour tos vos espaces intérieurs et extérieurs."
-          imageUrl="/imgcarrelagecard.png"
-        />
-        <Card
-          title="ISOLATION THERMIQUE"
-          description="Une isolation performante pour un meilleur confort et des économies d’énergie."
-          imageUrl="/imgiso.png"
-        />
-        <Card
-          title="ELECTRICITÉ GÉNÉRALE"
-          description="Des installations électriques sûres, conformes et adaptées à vos besoins."
-          imageUrl="/elecimgcard.png"
-        />
-        <Card
-          title="INSTALATION SANITAIRE"
-          description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-          imageUrl="/imginstalsani.png"
-        />
-        <Card
-          title="INSTALATION SANITAIRE ET CHAUFFAGE"
-          description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-          imageUrl="/Chaufimgcard.png"
-        />
-        <Card
-          title="MACONNERIE GENÉRALE"
-          description="Des installations électriques sûres, conformes et adaptées à vos besoins."
-          imageUrl="/maconimgcard.png"
-        />
-        <Card
-          title="PLACONNERIE ET PLATRIER"
-          description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-          imageUrl="/placoimgcard.png"
-        />
-        <Card
-          title="NETTOYAGE DE TOITURE ET FACADE"
-          description="Ceci est une description de carte simple, tu peux personnaliser ce texte."
-          imageUrl="/toitimgcard.png"
-        />
-      </div>
+  const services = [
+    {
+      title: "PLOMBERIE GÉNÉRALE",
+      imageUrl: "/imgplombgene.png",
+      tags: ["Dépannage urgent", "Installation", "Rénovation"],
+      desc: "Installation, réparation de fuites et entretien de robinetterie."
+    },
+    {
+      title: "CARRELAGE ET FAÏENCE",
+      imageUrl: "/imgcarrelagecard.png",
+      desc: "Pose technique de carrelage et faïence pour cuisines et salles de bains."
+    },
+    {
+      title: "ISOLATION THERMIQUE",
+      imageUrl: "/imgiso.png",
+      desc: "Solutions d'isolation par l'intérieur pour optimiser votre consommation."
+    },
+    {
+      title: "ÉLECTRICITÉ GÉNÉRALE",
+      imageUrl: "/elecimgcard.png",
+      desc: "Mise aux normes NF C 15-100 et dépannages électriques complets."
+    },
+    {
+      title: "INSTALLATION SANITAIRE",
+      imageUrl: "/imginstalsani.png",
+      desc: "Pose de chauffe-eau, WC, douches et équipements sanitaires."
+    },
+    {
+      title: "CHAUFFAGE & ECS",
+      imageUrl: "/Chaufimgcard.png",
+      desc: "Systèmes de chauffage central et production d'eau chaude sanitaire."
+    },
+    {
+      title: "MAÇONNERIE GÉNÉRALE",
+      imageUrl: "/maconimgcard.png",
+      desc: "Travaux de maçonnerie de second œuvre et aménagements structurels."
+    },
+    {
+      title: "PLÂTRERIE & PLACO",
+      imageUrl: "/placoimgcard.png",
+      desc: "Pose de cloisons sèches, doublages et finitions prêtes à peindre."
+    },
+    {
+      title: "ENTRETIEN TOITURE",
+      imageUrl: "/toitimgcard.png",
+      desc: "Démoussage et protection des couvertures pour garantir l'étanchéité."
+    },
+  ];
 
-      <div>
-        <h2 className="mb-8 pt-10 text-center text-5xl">NOS ENGAEMENTS</h2>
-        <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
-          <CardEngagement
-            title="Service rapide et efficace"
-            description="Nous nous engageons à intervenir rapidement, souvent dans les 24 heures, pour répondre à vos urgences en plomberie."
-            imageUrl="/icon-fast.png"
-          />
-          <CardEngagement
-            title="Qualité garantie"
-            description="Nos plombiers sont des professionnels certifiés, utilisant des matériaux de qualité pour garantir un travail durable et sécurisé."
-            imageUrl="/icon-qualite.png"
-          />
-          <CardEngagement
-            title="Satisfaction client"
-            description="Votre satisfaction est notre priorité. Nous faisons en sorte que chaque projet soit mené à bien selon vos attentes."
-            imageUrl="/icon-notation.png"
-          />
+  return (
+      <section className="mx-auto my-16 max-w-7xl px-4 sm:px-6">
+
+        {/* HEADER : Carré et sobre */}
+        <div className="mb-12 border-l-8 border-primary pl-6 py-2">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl uppercase">
+            Nos <span className="text-primary">Services Professionnels</span>
+          </h2>
+          <p className="mt-2 text-lg text-slate-600">
+            Solutions techniques et interventions d'urgence à Nantes.
+          </p>
         </div>
-      </div>
-      <div></div>
-    </div>
+
+        {/* GRID SERVICES : Angles réduits (rounded-md), structure stable */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {services.map((service, index) => (
+              <Card
+                  key={index}
+                  {...service}
+                  className="h-full" // Force la carte à remplir toute la hauteur de sa cellule
+              />
+          ))}
+        </div>
+
+        {/* SECTION ENGAGEMENTS : Design "Bloc" solide */}
+        <div className="mt-20 border-t-2 border-slate-100 pt-16">
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-bold uppercase tracking-widest text-slate-800">
+              Nos Engagements <span className="text-primary">Métier</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-0 border border-slate-200 md:grid-cols-3">
+            {[
+              { title: "Réactivité", desc: "Intervention sous 24h pour les urgences plomberie.", icon: "/icon-fast.png" },
+              { title: "Rigueur", desc: "Respect strict des normes DTU et certifications en vigueur.", icon: "/icon-qualite.png" },
+              { title: "Transparence", desc: "Devis détaillés et conseils personnalisés avant travaux.", icon: "/icon-notation.png" }
+            ].map((item, i) => (
+                <div
+                    key={i}
+                    className={`p-10 flex flex-col items-center text-center ${i !== 2 ? 'border-b md:border-b-0 md:border-r border-slate-200' : ''}`}
+                >
+                  <CardEngagement
+                      title={item.title}
+                      description={item.desc}
+                      imageUrl={item.icon}
+                  />
+                </div>
+            ))}
+          </div>
+        </div>
+      </section>
   );
 };

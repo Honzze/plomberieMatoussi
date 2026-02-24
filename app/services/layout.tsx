@@ -1,4 +1,4 @@
-import { Content } from "@/src/components/services/content";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,6 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Content />
       {children}
     </>
   );
