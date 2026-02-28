@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -28,13 +29,16 @@ export const Hero = () => {
 
             {/* CTA */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md transition hover:opacity-90">
+              <button className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md hover:opacity-90">
                 Nous contacter
               </button>
 
-              <button className="rounded-2xl border border-primary px-7 py-4 text-base font-semibold text-primary transition hover:bg-primary hover:text-background">
+              <Link
+                  href="#services"
+                  className="rounded-2xl border border-primary px-7 py-4 text-base font-semibold text-primary transition hover:bg-primary hover:text-background inline-block"
+              >
                 Nos services
-              </button>
+              </Link>
             </div>
           </div>
 
