@@ -63,11 +63,11 @@ export const Content = () => {
 
     return (
 
-        <section className="mx-auto my-16 max-w-7xl px-4 sm:px-6">
+        <section id="services" className="mx-auto my-16 max-w-7xl px-4 sm:px-6">
             <div className="mt-20 border-t-2 border-slate-100 pt-16">
 
                 {/* HEADER : Carré et sobre */}
-                <div id="services" className="mb-12 border-l-8 border-primary pl-6 py-2">
+                <div  className="mb-12 border-l-8 border-primary pl-6 py-2">
                     <h2 className="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl uppercase">
                         Nos <span className="text-primary">Services Professionnels</span>
                     </h2>

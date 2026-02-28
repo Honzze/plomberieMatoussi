@@ -37,7 +37,7 @@ export const Footer = () => {
               ].map((item) => (
                 <li key={item}>
                   <a
-                    href="#"
+                    href="#services"
                     className="inline-block transition-all duration-200 hover:translate-x-1 hover:text-blue-400"
                   >
                     {item}
