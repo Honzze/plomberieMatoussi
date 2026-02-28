@@ -5,7 +5,8 @@ type CardProps = {
     title: string;
     description?: string; // Made optional for cleaner logic
     imageUrl: string;
-    liprops?: string[]; // Optional as per your content structure
+    liprops?: string[];
+    // Optional as per your content structure
 };
 
 const Card = ({ title, description, imageUrl, liprops = [] }: CardProps) => {
@@ -36,11 +37,12 @@ const Card = ({ title, description, imageUrl, liprops = [] }: CardProps) => {
                     </div>
 
                     {liprops.length > 0 && (
-                        <ul className="text-xs font-bold space-y-1 text-slate-700">
+                        <ul className="text-sm text-slate-800 font-bold space-y-1 text-slate-700">
                             {liprops.map((item, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <span className="h-1 w-1 bg-primary" /> {item}
                                 </li>
+
                             ))}
                         </ul>
                     )}

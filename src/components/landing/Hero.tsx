@@ -15,13 +15,13 @@ export const Hero = () => {
               Plomberie & Multi-services à Nantes
             </span>
 
-            <h1 className="text-4xl leading-tight font-bold text-foreground sm:text-5xl">
+            <h1 className="text-4xl text-slate-800 leading-tight font-bold text-foreground sm:text-5xl">
               Matoussi Plomberie & Multi-services à{" "}
               <span className="text-primary">Nantes</span>
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-muted-foreground">
-              Nos techniciens vous accompagnent pour tous vos projets de
+              Mohamed qualifié depuis 21 ans vous accompagnent pour tous vos projets de
               rénovation et de création. Intervention rapide à Nantes et dans
               ses alentours (Bouguenais, Rezé, Carquefou…).
             </p>

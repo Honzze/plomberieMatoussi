@@ -15,17 +15,11 @@ export const Footer = () => {
               Matoussi <span className="text-blue-500">Plomberie</span>
             </h3>
             <p className="text-sm leading-relaxed text-slate-400">
-              Expert en solutions de plomberie et dépannage d'urgence à Nantes.
+              Expert en solutions de plomberie, multi-services et dépannage d'urgence à Nantes.
               Une intervention certifiée pour un confort durable.
             </p>
             {/* Trust Badges moved here for better vertical flow */}
             <div className="flex flex-wrap gap-2 pt-2">
-              <span className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/50 px-3 py-1 text-[10px] font-medium text-blue-400">
-                ⭐ Devis gratuit
-              </span>
-              <span className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/50 px-3 py-1 text-[10px] font-medium text-emerald-400">
-                ⚡ Rapide
-              </span>
             </div>
           </div>
 
@@ -66,19 +60,19 @@ export const Footer = () => {
               <li className="flex items-center gap-3">
                 <span className="text-blue-500">📞</span>
                 <a
-                  href="tel:0600000000"
+                  href="tel:0687780794"
                   className="transition hover:text-white"
                 >
-                  06 00 00 00 00
+                  06 87 78 07 94
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-blue-500">✉️</span>
                 <a
-                  href="mailto:contact@matoussi.fr"
+                  href="mailto:matoussiplomberiemultiservices@gmail.com"
                   className="transition hover:text-white"
                 >
-                  contact@matoussi.fr
+                  matoussiplomberiemultiservices@gmail.com
                 </a>
               </li>
             </ul>
@@ -91,9 +85,6 @@ export const Footer = () => {
             </h4>
             <p className="text-sm leading-relaxed text-slate-400">
               Intervention d'urgence 24h/7j pour les fuites majeures. <br />
-              <span className="font-medium text-white">
-                Lun - Ven : 8h00 - 19h00
-              </span>
             </p>
           </div>
         </div>
@@ -130,8 +121,8 @@ export const Footer = () => {
 
       {/* FLOATING CALL BUTTON */}
       <a
-        href="tel:0600000000"
-        className="fixed right-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-2xl transition-transform hover:scale-110 active:scale-95 md:hidden"
+        href="tel:0687780794"
+        className="fixed right-6 bottom-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-2xl transition-transform hover:scale-110 active:scale-95 md:hidden"
         aria-label="Appeler maintenant"
       >
         <svg

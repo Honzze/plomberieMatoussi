@@ -40,21 +40,21 @@ export const Navbar = () => {
           <div className="hidden lg:block">
             <div className="flex items-center space-x-8">
               <Link
-                href="/services"
-                className="group relative text-sm font-bold tracking-wider text-slate-700 uppercase transition hover:text-blue-600"
+                href="#services"
+                className="group relative text-sm font-bold tracking-wider text-slate-800 uppercase transition hover:text-primary"
               >
-                Plomberie
-                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all group-hover:w-full" />
+                NOS SERVICES
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all group-hover:w-full" />
               </Link>
-
               <Link
-                href="#"
-                className="group relative text-sm font-bold tracking-wider text-slate-700 uppercase transition hover:text-blue-600"
+                  href="#services"
+                  className="group relative text-sm font-bold tracking-wider text-slate-800 uppercase transition hover:text-primary"
               >
-                Dépannages
-                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-600 transition-all group-hover:w-full" />
+                NOUS CONTACTER
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all group-hover:w-full" />
               </Link>
 
+              {/*
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
@@ -85,15 +85,17 @@ export const Navbar = () => {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
+              */}
             </div>
           </div>
+
 
           {/* ACTIONS */}
           <div className="flex items-center gap-4">
             {/* Phone Button - more "solid" look */}
             <Button
               asChild
-              className="relative h-12 rounded-full border-t border-white/20 bg-[#6a95c4] px-12 font-bold tracking-tight text-white shadow-[0_4px_14px_0_rgba(106,149,196,0.39)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#5d89ba] active:translate-y-0"
+              className="relative h-12 rounded-full border-t border-white/20 bg-primary px-12 font-bold tracking-tight text-white shadow-[0_4px_14px_0_rgba(106,149,196,0.39)] transition-all duration-200 hover:bg-[#5d89ba] active:translate-y-0"
             >
               <a href="tel:+33612345678" className="flex items-center gap-2">
                 {/* Use a cleaner SVG icon instead of the emoji for a pro look */}
@@ -140,13 +142,10 @@ export const Navbar = () => {
                 <DropdownMenuContent align="end" className="mt-2 w-56">
                   <DropdownMenuGroup>
                     <DropdownMenuItem className="font-bold tracking-tight uppercase">
-                      Plomberie
+                      NOS SERVICES
                     </DropdownMenuItem>
                     <DropdownMenuItem className="font-bold tracking-tight uppercase">
-                      Dépannages
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="font-bold tracking-tight uppercase">
-                      Services
+                      NOUS CONTACTER
                     </DropdownMenuItem>
                   </DropdownMenuGroup>
                 </DropdownMenuContent>
