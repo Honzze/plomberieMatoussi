@@ -98,10 +98,10 @@ export const Content = () => {
                     <h3 className="text-xl font-bold uppercase tracking-widest text-slate-800 mt-6">ARTISANT <span className="text-primary">Référence</span></h3>
                     <Image
                         src="/MAAFCertif.jpg"
-                        width={240}
-                        height={120}
+                        width={200}
+                        height={200}
                         alt="Matoussi Plomberie"
-                        className="mt-6  object-contain sm:h-16"
+                        className="mt-6 object-contain sm:w-auto "
                     />
                 </div>
 
