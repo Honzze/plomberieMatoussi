@@ -16,7 +16,7 @@ export const Hero = () => {
               Plomberie & Multi-services à Nantes
             </span>
 
-            <h1 className="text-4xl text-slate-800 leading-tight font-bold text-foreground sm:text-5xl">
+            <h1 className="text-4xl text-slate-800 leading-tight font-bold  sm:text-5xl">
               Matoussi Plomberie & Multi-services à{" "}
               <span className="text-primary">Nantes</span>
             </h1>
@@ -29,9 +29,9 @@ export const Hero = () => {
 
             {/* CTA */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button href="mailto:matoussiplomberiemultiservices@gmail.com" className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md hover:opacity-90">
+              <Link href="mailto:matoussiplomberiemultiservices@gmail.com" className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md hover:opacity-90">
                 Nous contacter
-              </button>
+              </Link>
 
               <Link
                   href="#services"
