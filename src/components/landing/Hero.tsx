@@ -34,7 +34,7 @@ export const Hero = () => {
               </Link>
 
               <Link
-                  href="#services"
+                  href="https://matoussiplomberiemultiservices.fr/#services"
                   className="rounded-2xl border border-primary px-7 py-4 text-base font-semibold text-primary transition hover:bg-primary hover:text-background inline-block"
               >
                 Nos services
