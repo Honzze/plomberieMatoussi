@@ -39,7 +39,7 @@ export const Content = () => {
             title: "CHAUFFAGE & ECS",
             imageUrl: "/Chaufimgcard.png",
             desc: "Systèmes de chauffage central et production d'eau chaude sanitaire.",
-            liprops: ["Installation de chaudières", "Rénovation de systèmes de chauffage", "Entretien de chauffe-eau", "Dépannage de chauffage"]
+            liprops: ["Installation de chaudières", "Rénovation de systèmes de chauffage"]
         },
         {
             title: "MAÇONNERIE GÉNÉRALE",

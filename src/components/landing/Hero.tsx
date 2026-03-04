@@ -22,7 +22,7 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-muted-foreground">
-              Mohamed qualifié depuis 21 ans vous accompagnent pour tous vos projets de
+              Technicien qualifié depuis 21 ans vous accompagnent pour tous vos projets de
               rénovation et de création. Intervention rapide à Nantes et dans
               ses alentours (Bouguenais, Rezé, Carquefou…).
             </p>
