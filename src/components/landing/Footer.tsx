@@ -33,7 +33,6 @@ export const Footer = () => {
                 "Accueil",
                 "Nos services",
                 "Contactez-nous",
-                "Nos engagements",
               ].map((item) => (
                 <li key={item}>
                   <a

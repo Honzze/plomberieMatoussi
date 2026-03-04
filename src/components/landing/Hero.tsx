@@ -29,7 +29,7 @@ export const Hero = () => {
 
             {/* CTA */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md hover:opacity-90">
+              <button href="mailto:matoussiplomberiemultiservices@gmail.com" className="rounded-2xl bg-primary px-7 py-4 text-base font-semibold text-background shadow-md hover:opacity-90">
                 Nous contacter
               </button>
 
