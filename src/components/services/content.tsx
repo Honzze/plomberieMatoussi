@@ -10,6 +10,7 @@ export const Content = () => {
             imageUrl: "/imgplombgene.png",
             tags: ["Dépannage urgent", "Installation", "Rénovation"],
             liprops: ["Dépannage urgent", "Installation sanitaire", "Réparation de fuites", "Entretien robinetterie"]
+
         },
         {
             title: "CARRELAGE ET FAÏENCE",

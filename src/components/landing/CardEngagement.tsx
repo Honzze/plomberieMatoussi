@@ -20,7 +20,7 @@ const CardEngagement = ({
         width={96}
         height={96}
         src={imageUrl}
-        alt="Image de la carte"
+        alt="Depannage Plomberie Nantes Matoussi Plomberie"
       />
       <div className="px-6 py-4">
         <p className="text-base text-gray-700">{description}</p>

@@ -51,8 +51,7 @@ export const Hero = () => {
                 width={900}
                 height={700}
                 priority
-                alt="Technicien Matoussi Plomberie intervenant à Nantes"
-              />
+                alt="Logo Matoussi Plomberie Depannages Nantes "              />
             </div>
           </div>
         </div>
