@@ -15,6 +15,7 @@
     "@react-google-maps/api": "^2.20.8",
     "@tailwindcss/vite": "^4.1.18",
     "@tailwindplus/elements": "^1.0.22",
+    "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint-plugin-prettier": "^5.5.5",
