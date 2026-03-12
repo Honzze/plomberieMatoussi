@@ -5,6 +5,7 @@ import { Navbar } from "@/src/components/landing/navbar";
 import { ThemeProvider } from "@/src/components/theme-provider";
 import React from "react";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Footer } from "@/src/components/landing/Footer";
 
 const geistSans = Geist({
@@ -60,6 +61,7 @@ export default function RootLayout({
         {children}
       </ThemeProvider>
       <Analytics/>
+      <SpeedInsights/>
       </body>
       </html>
   );
