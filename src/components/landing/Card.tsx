@@ -25,7 +25,7 @@ const Card = ({ title, description, imageUrl, liprops = [] }: CardProps) => {
                         {imageUrl ? (
                             <Image
                                 src={imageUrl}
-                                alt={title}
+                                alt={"Plombier Multi-services dépannages Nantes "}
                                 fill
                                 className="object-contain p-2"
                             />

@@ -17,7 +17,7 @@ export const Hero = () => {
             </span>
 
             <h1 className="text-4xl text-slate-800 leading-tight font-bold  sm:text-5xl">
-              Matoussi Plomberie & Multi-services à{" "}
+              Plomberie & Multi-services Matoussi  à{" "}
               <span className="text-primary">Nantes</span>
             </h1>
 
