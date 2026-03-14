@@ -68,7 +68,7 @@ export default function RootLayout({
       </ThemeProvider>
       <Analytics/>
       <SpeedInsights/>
-      <link rel="icon" href="/public/favicon.ico" sizes="any" />
+      <link rel="icon" href="/FaviconLogo.png" sizes="any" />
       </body>
       </html>
   );
