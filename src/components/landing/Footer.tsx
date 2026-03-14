@@ -12,7 +12,7 @@ export const Footer = () => {
           {/* BRAND SECTION */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold tracking-tight text-white">
-              Matoussi <span className="text-blue-500">Plomberie</span>
+              Multi-services <span className="text-blue-500">Plomberie</span>
             </h3>
             <p className="text-sm leading-relaxed text-slate-400">
               Expert en solutions de plomberie, multi-services et dépannage d'urgence à Nantes.

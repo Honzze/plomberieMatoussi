@@ -19,8 +19,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Plomberie & Multi-services à Nantes | Dépannage 24h/7j",
-  description: "Technicien plombier et multi-services qualifié depuis 21 ans à Nantes. Intervention rapide pour fuites et rénovations. Contactez-nous au 0612345678 pour une intervention efficace et professionnelle.",
+    title: "Plomberie & Multi-services à Nantes | Dépannage 24h/7j",
+    description: "Technicien plombier et multi-services qualifié depuis 21 ans à Nantes. Intervention rapide pour fuites et rénovations. Contactez-nous au 0612345678 pour une intervention efficace et professionnelle.",
+    openGraph: {
+        title: "Plomberie & Multi-services à Nantes | Dépannage 24h/7j",
+        description: "Technicien plombier et multi-services qualifié depuis 21 ans à Nantes. Intervention rapide pour fuites et rénovations. Contactez-nous au 0612345678 pour une intervention efficace et professionnelle.",
+        url: "https://matoussiplomberiemultiservices.fr",
+        siteName: "Plomberie & Multi-services Matoussi",
+    }
 };
 const jsonLd = {
   "@context": "https://schema.org",
