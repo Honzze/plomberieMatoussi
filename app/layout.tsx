@@ -36,7 +36,7 @@ const jsonLd = {
     "postalCode": "44000",
     "addressCountry": "FR"
   },
-  "areaServed": ["Nantes", "Bouguenais", "Rezé", "Carquefou", "saint-sébastien-sur-loire", "Orvault", "Saint-Herblain", "Vertou", "Sautron", "Indre", "Saint-Jean-de-Boiseau", "Le Pellerin", "La Chapelle-sur-Erdre", "Saint-Léger-les-Vignes", "Mauves-sur-Loire", "Basse-Goulaine", "Haute-Goulaine", "Saint-Fiacre-sur-Maine", "Le Loroux-Bottereau", "Vallet", "Gorges", "Clisson", "Aigrefeuille-sur-Maine", "divaion", "Saint-Étienne-de-Montluc", "Port-Saint-Père", "Frossay", "Saint-Viaud", "Corsept", "Paimbœuf", "Montoir-de-Bretagne", "Saint-Brevin-les-Pins", "Saint-Nazaire"],
+  "areaServed": ["Nantes", "Bouguenais", "Rezé", "Carquefou", "saint-sébastien-sur-loire", "Orvault", "Saint-Herblain", "Vertou", "Sautron", "Indre", "Saint-Jean-de-Boiseau", "Le Pellerin", "La Chapelle-sur-Erdre", "Saint-Léger-les-Vignes", "Mauves-sur-Loire", "Basse-Goulaine", "Haute-Goulaine", "Saint-Fiacre-sur-Maine", "Le Loroux-Bottereau", "Vallet", "Gorges", "Clisson", "Aigrefeuille-sur-Maine", "divaion", "Saint-Étienne-de-Montluc", "Port-Saint-Père", "Frossay", "Saint-Viaud", "Corsept", "Paimbœuf", "Montoir-de-Bretagne", "Saint-Brevin-les-Pins", "Saint-Nazaire", "saint-sébastien-sur-loire"],
 };
 
 export default function RootLayout({
